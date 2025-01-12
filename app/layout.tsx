@@ -3,7 +3,6 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 import { ReactNode } from "react";
-import { SessionProvider } from "next-auth/react";
 
 const ibmPlexSans = localFont({
   src: [
