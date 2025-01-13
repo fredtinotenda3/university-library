@@ -23,7 +23,7 @@ const Header = () => {
               pathname === "/library" ? "text-light-200" : "text-light-100"
             )}
           >
-            Library
+            Library.
           </Link>
         </li>
       </ul>
