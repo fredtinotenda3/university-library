@@ -2,17 +2,20 @@ import ImageKit from "imagekit";
 import config from "@/lib/config";
 import { NextResponse } from "next/server";
 
-// Destructure imagekit credentials from config
+// Debugging: log the values of publicKey, privateKey, and urlEndpoint before initialization
 const {
   env: {
     imagekit: { publicKey, privateKey, urlEndpoint },
   },
 } = config;
 
-// Debugging logs to check the environment variables
-console.log("ImageKit publicKey:", publicKey);
-console.log("ImageKit privateKey:", privateKey);
-console.log("ImageKit urlEndpoint:", urlEndpoint);
+console.log("Public Key from config:", publicKey); // Log publicKey to check its value
+console.log("Private Key from config:", privateKey); // Log privateKey to check its value
+console.log("URL Endpoint from config:", urlEndpoint); // Log URL Endpoint to check its value
+
+if (!publicKey) {
+  console.error("Error: publicKey is not defined.");
+}
 
 // Initialize ImageKit instance
 const imagekit = new ImageKit({
