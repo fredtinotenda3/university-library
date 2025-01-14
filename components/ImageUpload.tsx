@@ -89,7 +89,7 @@ const ImageUpload = ({
         ref={ikUploadRef}
         onError={onError}
         onSuccess={onSuccess}
-        fileName="test-upload.png"
+        fileName=""
       />
 
       <button
